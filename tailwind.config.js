@@ -31,7 +31,7 @@ module.exports = {
 
       // 🔤 FONTS
       fontFamily: {
-        sans: ["sans-regular"],
+        "sans-regular": ["sans-regular"],
         "sans-light": ["sans-light"],
         "sans-medium": ["sans-medium"],
         "sans-semibold": ["sans-semibold"],
