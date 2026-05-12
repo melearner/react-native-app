@@ -88,7 +88,7 @@ const SignUp = () => {
     };
 
     // Don't show anything if already signed in or sign-up is complete
-    if (signUp.status === 'complete' || isSignedIn) {
+    if (signUp?.status === 'complete' || isSignedIn) {
         return null;
     }
 

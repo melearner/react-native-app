@@ -30,7 +30,7 @@ const SignIn = () => {
 
   // 🔐 SIGN IN
   const handleSubmit = async () => {
-    if (!formValid) return;
+    if (!formValid || !signIn) return;
 
     try {
       setLoading(true);
@@ -70,6 +70,7 @@ const SignIn = () => {
 
   // 🔢 VERIFY EMAIL CODE
   const handleVerify = async () => {
+    if (!code || !signIn) return;
     try {
       setLoading(true);
 
@@ -148,6 +149,7 @@ const SignIn = () => {
                   <Pressable
                     className="auth-secondary-button"
                     onPress={() => signIn.emailCode.sendCode()}
+                    disabled={loading}
                   >
                     <Text className="auth-secondary-button-text">
                       Resend Code
@@ -157,6 +159,7 @@ const SignIn = () => {
                   <Pressable
                     className="auth-secondary-button"
                     onPress={() => signIn.reset()}
+                    disabled={loading}
                   >
                     <Text className="auth-secondary-button-text">
                       Start Over
