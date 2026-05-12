@@ -21,12 +21,12 @@
     }
 
     .home-header {
-        @apply mb-2.5 flex-row items-center justify-between;
-    }
+  @apply mb-2.5 flex-row items-center justify-between w-full;
+}
 
     .home-user {
-        @apply flex-row items-center;
-    }
+  @apply flex-row items-center flex-1;
+}
 
     .home-avatar {
         @apply size-16 rounded-full;
